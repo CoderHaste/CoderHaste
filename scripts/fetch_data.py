@@ -60,7 +60,11 @@ def main() -> int:
 
     u = payload["data"]["user"]
     repos = []
+    # don't count the profile repo itself (e.g. CoderHaste/CoderHaste)
+    self_repo = os.environ.get("GITHUB_REPOSITORY", "").split("/")[-1].lower()
     for n in u["repositories"]["nodes"]:
+        if n["name"].lower() in {self_repo, CONFIG["login"].lower()}:
+            continue
         lang = n["primaryLanguage"] or {}
         repos.append({
             "name": n["name"],
@@ -87,7 +91,7 @@ def main() -> int:
             "login": CONFIG["login"],
             "name": u["name"],
             "followers": u["followers"]["totalCount"],
-            "public_repos": u["repositories"]["totalCount"],
+            "public_repos": len(repos),
             "stars": sum(r["stars"] for r in repos),
             "language_counts": dict(Counter(r["language"] for r in repos if r["language"])),
         },
