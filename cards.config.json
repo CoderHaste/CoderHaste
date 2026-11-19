@@ -1,0 +1,62 @@
+{
+  "login": "CoderHaste",
+  "name": "Prateek Manjunath",
+  "tagline": "Machine learning & data science, plus embedded telemetry on ESP32.",
+  "location": "India",
+  "status": "Focusing",
+  "portrait": "assets/portrait.jpg",
+
+  "tiles": [
+    {
+      "id": "ml",
+      "label": "ML lab",
+      "languages": ["Python", "Jupyter Notebook"],
+      "unit": "repos",
+      "caption": "XGBoost · LightGBM · Optuna",
+      "href": "https://github.com/CoderHaste?tab=repositories&language=python"
+    },
+    {
+      "id": "hardware",
+      "label": "Hardware",
+      "languages": ["C++", "C"],
+      "unit": "repos",
+      "caption": "ESP32-C3 · CAN bus · OLED",
+      "href": "https://github.com/CoderHaste?tab=repositories&language=c%2B%2B"
+    },
+    {
+      "id": "all",
+      "label": "All repos",
+      "languages": "*",
+      "unit": "public",
+      "caption": "★ {stars} stars earned",
+      "href": "https://github.com/CoderHaste?tab=repositories"
+    }
+  ],
+
+  "featured": [
+    {
+      "repo": "ather-obd-monitor",
+      "title": "A-OBD Scanner",
+      "icon": "bolt",
+      "viz": "pack",
+      "blurb": "A pocket-sized live dashboard, data logger and CAN tool for an electric scooter: an OLED on the device, and a phone or PC dashboard over its own Wi-Fi.",
+      "tags": ["ESP32-C3", "CAN bus", "OLED", "Wi-Fi dashboard"]
+    },
+    {
+      "repo": "Customer-Churn-Prediction-ML",
+      "title": "Customer Churn Prediction",
+      "icon": "trend",
+      "viz": "roc",
+      "blurb": "Predicts telecom customer churn with Random Forest, XGBoost and LightGBM, using SMOTE for class imbalance and ROC-AUC to compare them.",
+      "tags": ["XGBoost", "LightGBM", "SMOTE"]
+    },
+    {
+      "repo": "Hyperparameter-Optimization-Optuna-vs-GridSearch",
+      "title": "Optuna vs GridSearch",
+      "icon": "sliders",
+      "viz": "optuna",
+      "blurb": "Tunes an XGBoost classifier three ways (Optuna, GridSearchCV and RandomizedSearchCV) and compares accuracy and ROC-AUC.",
+      "tags": ["Optuna", "GridSearchCV", "XGBoost"]
+    }
+  ]
+}
