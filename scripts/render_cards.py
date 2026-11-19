@@ -456,8 +456,8 @@ def card_activity(theme, data, st, base=0.0):
     c.add(f'<line x1="32" x2="{W - 32}" y1="{row_y}" y2="{row_y}" stroke="{c.c["line"]}"/>')
     b = st["busiest"]
     cells = [
-        ("Current streak", st["current"], "days"),
-        ("Longest streak", st["longest"], "days"),
+        ("Current streak", st["current"], "day" if st["current"] == 1 else "days"),
+        ("Longest streak", st["longest"], "day" if st["longest"] == 1 else "days"),
         ("Active days", st["active"], f"/ {st['window']}"),
         ("Busiest day", f"{MONTHS[b['date'].month - 1]} {b['date'].day}", f"· {b['count']}"),
     ]
